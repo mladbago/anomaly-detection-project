@@ -1,0 +1,31 @@
+POLAND_LAT_MIN, POLAND_LAT_MAX = 49.00, 54.83
+POLAND_LON_MIN, POLAND_LON_MAX = 14.12, 24.15
+
+TOTAL_CARDS = 10000
+TOTAL_USERS = 7000
+MIN_NORMAL_TX_VALUE = 5.0
+MAX_NORMAL_TX_VALUE = 150.0
+
+ANOMALY_IMPOSSIBLE_TRAVEL = "IMPOSSIBLE_TRAVEL"
+ANOMALY_CARD_TESTING = "CARD_TESTING"
+ANOMALY_FREQUENCY_BURST = "FREQUENCY_BURST"
+ANOMALY_MAX_OUT = "MAX_OUT"
+ANOMALY_NIGHT_OWL = "NIGHT_OWL"
+ANOMALY_AMOUNT_SPIKE = "AMOUNT_SPIKE"
+
+EARTH_RADIUS_KM = 6371.0
+MAX_SPEED_KMH = 1000.0
+# Impossible-travel also requires a *meaningful* jump, otherwise tiny GPS drift
+# between two quick same-card charges could imply a huge speed and fire falsely.
+IMPOSSIBLE_TRAVEL_MIN_KM = 50.0
+MAX_OUT_RATIO = 0.95
+FREQUENCY_BURST_THRESHOLD = 5
+FREQUENCY_WINDOW_MS = 2000
+NIGHT_OWL_MIN_VALUE = 1000.0
+NIGHT_OWL_HOUR = 3
+MICRO_CHARGE_MAX = 1.0
+SPIKE_MIN_VALUE = 500.0
+
+# Rolling Z-Score (per-card amount profile) tuning.
+ZSCORE_THRESHOLD = 3.5      # standard deviations above the rolling mean
+ZSCORE_MIN_SAMPLES = 8      # warm-up: ignore a card until it has this much history

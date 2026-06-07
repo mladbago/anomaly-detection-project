@@ -1,0 +1,5 @@
+# Dependencies for the test-suite. Install into the project venv:
+#   pip install -r tests/requirements.txt
+pytest==8.3.3
+jsonschema==4.23.0
+pymongo==4.8.0
